@@ -6,7 +6,7 @@ window.onload = function(){
     button.addEventListener("click" , function(){
         // button클릭했을 때, 실행해라 . scrollToSection을
         // 영역으로 이동해라
-        scrollToSection("#ft_area")
+        scrollToSection("#business")
     })
     function scrollToSection(sectionId){
     // 괄호 안의 이름은 임의지정
@@ -17,5 +17,6 @@ window.onload = function(){
             section.scrollIntoView({behavior:"smooth"})
         }
     }
+    //top button scroll
 }
 

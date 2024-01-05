@@ -44,6 +44,13 @@ body {
   position: relative;
   display: block;
 }
+/* top button */
+.top_bt{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
 /* header */
 .header {
   width: 100%;
