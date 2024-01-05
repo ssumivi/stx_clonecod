@@ -44,66 +44,14 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="js/script.js" />
-    <script language="JavaScript">
-      //head 태그 안에 스크립트 선언
-      function setCookie(name, value, expiredays) {
-        var todayDate = new Date();
-        todayDate.setDate(todayDate.getDate() + expiredays);
-        document.cookie =
-          name +
-          "=" +
-          escape(value) +
-          "; path=/; expires=" +
-          todayDate.toGMTString() +
-          ";";
-      }
-      function closePop() {
-        if (document.pop_form.chkbox.checked) {
-          setCookie("maindiv", "done", 1);
-        }
-        document.all["layer_popup"].style.visibility = "hidden";
-      }
-    </script>
-    <script language="Javascript">
-      cookiedata = document.cookie;
-      if (cookiedata.indexOf("maindiv=done") < 0) {
-        document.all["layer_popup"].style.visibility = "visible";
-      } else {
-        document.all["layer_popup"].style.visibility = "hidden";
-      }
-    </script>
+    <!-- 자바스크립트 -->
+    <script src="js/script.js"></script>
+    <!-- IE9 이하는 html5 태그를 지원하지 않는다 -->
+    <script src="js/html5shiv.js"></script>
+    <!-- css3 적용 -->
+    <script src="js/prefixfree.min.js"></script>
   </head>
-
   <body>
-    <!-- layer popup content -->
-    <div class="layerPopup" id="layer_popup" style="visibility: visible">
-      <div class="layerBox">
-        <h4 class="title">공지사항</h4>
-        <div class="cont">
-          <p>
-            <span
-              >이 페이지는 교육목적의
-              <br />
-              클론코딩 페이지 입니다.</span
-            >
-            <img
-              src="images/torokko_trolley_rail_businesswoman.png"
-              usemap="#popup"
-              alt="event page"
-            />
-          </p>
-        </div>
-        <form name="pop_form">
-          <div id="check">
-            <input type="checkbox" name="chkbox" value="checkbox" id="chkbox" />
-            <label for="chkbox">&nbsp&nbsp오늘 하루동안 보지 않기</label>
-          </div>
-          <div id="close"><a href="javascript:closePop();">닫기</a></div>
-        </form>
-      </div>
-    </div>
-    <main id="wrap">
       <!-- header area -->
       <header class="header">
         <div class="header_inner">
@@ -193,7 +141,7 @@
         </div>
       </section>
       <!-- description area -->
-      <section class="business">
+      <section class="business" id="business">
         <div class="biz_inner container">
           <div class="biz_top">
             <h2 class="biz_title">STX Engineering & Construction Business</h2>
@@ -334,7 +282,7 @@
         </div>
       </section>
       <!-- footer -->
-      <footer class="cf">
+      <footer class="cf" id="ft_area">
         <div class="footer_inner container cf">
           <!-- 하단이미지 -->
           <a href="#" class="footer_logo">
