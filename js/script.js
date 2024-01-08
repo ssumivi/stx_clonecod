@@ -18,5 +18,20 @@ window.onload = function(){
         }
     }
     //top button scroll
+    const topBtn = document. getElementById("top_btn");
+    topBtn.addEventListener("click", function(even){
+    // index.html a태그에 #링크 때문에 클릭했을 때 메인페이지로 이동하는 것을 막는 속성
+    even.preventDefault();
+    console.log(window.scrollY);
+    if(window.scrollY == 1000){
+        window.scrollTo{(
+            top:2000, 
+            behavior:"smooth",
+        )}
+                return;
+            }}
+    }
+    else{}
+    })
 }
 

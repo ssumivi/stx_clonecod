@@ -45,11 +45,71 @@ body {
   display: block;
 }
 /* top button */
-.top_bt{
+.top_bt {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: 30px;
+  bottom: 60px;
   z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.top_bt .chat_btn span {
+  position: absolute;
+  top: 30px;
+  right: 90px;
+  width: 180px;
+  background-color: #ffffff;
+  border-radius: 23px;
+  padding: 8px 10px;
+  text-align: center;
+  box-shadow: 0px 1px 3px 0 rgb(0, 0, 0, 0.3);
+  display: none;
+}
+.top_bt .chat_btn:hover span {
+  display: block;
+}
+.top_bt .shop_btn {
+  position: relative;
+  display: block;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0px 1px 3px 0 rgb(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+  margin-top: 5px;
+}
+.top_bt .top_btn {
+  background-color: #ed1c24;
+  width: 55px;
+  line-height: 55px;
+  border-radius: 50%;
+  text-align: center;
+}
+.top_bt .top_btn img {
+  transform: rotate(180deg);
+}
+.top_bt .top_btn img.up {
+  transform: rotate(0deg);
+  /* 이미지의 위아래 전환 */
+}
+.top_bt .chat_btn {
+  animation: updown 1.5s infinite;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 /* header */
 .header {
@@ -424,18 +484,18 @@ body {
   background-position: 0px -49px;
 }
 /* cs center */
-.cs_center{
+.cs_center {
   position: relative;
   display: block;
   width: 100%;
   min-width: 1200px;
   background-color: #f8f8f8;
 }
-.cs_inner{
+.cs_inner {
   width: 100%;
   padding: 60px 0 100px;
 }
-.cs_link{
+.cs_link {
   display: block;
   width: calc(100% / 2 - 1px);
   float: left;
@@ -443,51 +503,51 @@ body {
   background-position: 400px 30px;
   background-color: #ffffff;
 }
-.a_txt{
+.a_txt {
   padding: 40px 56px;
-  width:  80%;
+  width: 80%;
 }
-.cs_link:nth-of-type(2){
+.cs_link:nth-of-type(2) {
   background: url("../images/bg_custom.png") no-repeat center;
   background-position: 420px 30px;
   background-color: #fff;
   float: right;
 }
-.cs_link h3{
+.cs_link h3 {
   font-size: 30px;
   font-weight: 400;
 }
-.cs_link p{
+.cs_link p {
   font-size: 16px;
   margin-top: 15px;
 }
 /* about us*/
-.about_us{
+.about_us {
   position: relative;
   display: block;
   width: 100%;
   margin-top: 80px;
 }
-.abu_inner{
+.abu_inner {
   width: 100%;
 }
-.abu_txt{
+.abu_txt {
   width: 50%;
   padding-right: 100px;
   float: left;
 }
-.abu_txt h3{
+.abu_txt h3 {
   font-size: 44px;
   font-weight: 400;
   padding: 20px;
   margin-bottom: 40px;
 }
-.txt_subbox{
+.txt_subbox {
   padding-left: 100px;
   font-size: 15px;
   letter-spacing: normal;
 }
-.txt_subbox::before{
+.txt_subbox::before {
   content: "";
   display: inline-block;
   position: relative;
@@ -497,31 +557,31 @@ body {
   height: 5px;
   background-color: #ed1c24;
 }
-.abu_txt span{
+.abu_txt span {
   display: block;
   font-size: 21px;
   font-weight: 400;
   margin-bottom: 20px;
 }
-.abu_txt p{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+.abu_txt p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
-.abu_img{
+.abu_img {
   width: 50%;
   float: left;
 }
 /* bt icon */
-.bt_icon{
+.bt_icon {
   width: 100%;
   text-align: center;
   position: relative;
   margin: 0 auto;
 }
-.bt_icon ul li{
+.bt_icon ul li {
   float: left;
   width: 110px;
   font-size: 22px;
@@ -530,7 +590,7 @@ body {
   padding: 80px 0;
   margin: 20px 0 0 200px;
 }
-.bt_icon ul li a::before{
+.bt_icon ul li a::before {
   content: "";
   display: block;
   position: relative;
@@ -540,16 +600,16 @@ body {
   background: url("../images/bg_icon.png") no-repeat center;
   background-position: 0 0;
 }
-.bt_icon ul li:nth-of-type(2) a::before{
+.bt_icon ul li:nth-of-type(2) a::before {
   background: url("../images/bg_icon.png") no-repeat center;
   background-position: -115px, 0;
 }
-.bt_icon ul li:nth-of-type(3) a::before{
+.bt_icon ul li:nth-of-type(3) a::before {
   background: url("../images/bg_icon.png") no-repeat center;
   background-position: -235px, 0;
 }
 /* footer */
-footer{
+footer {
   width: 100%;
   display: block;
   position: relative;
@@ -557,13 +617,13 @@ footer{
   background-color: #4e4e4e;
   padding-bottom: 30px;
 }
-.footer_inner{
+.footer_inner {
   padding: 50px 0 0;
 }
-.footer_logo{
+.footer_logo {
   float: left;
 }
-.footer-info{
+.footer-info {
   float: left;
   font-size: 13px;
   font-style: normal;
