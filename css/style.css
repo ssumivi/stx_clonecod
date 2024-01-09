@@ -44,6 +44,116 @@ body {
   position: relative;
   display: block;
 }
+/* modal */
+body.active{
+  overflow-y: auto;
+}
+.modal_wrap{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0.5, 0.3);
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal_main:hover{
+  cursor: pointer;
+}
+.modal_main{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 50px;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+.modal_logo{
+  background: url("../images/me_icon.png")no-repeat center;
+  background-size: cover;
+  width: 130px;
+  height: 130px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.modal_nonotic{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  word-break: keep-all;
+  padding: 60px 0px;
+  line-height: 3.5;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 500px;
+}
+.modal_nonotic strong{
+  color: #ed1c24;
+  font-weight: 600;
+  /* background: linear-gradient(to top yellow -50%, transparent); */
+}
+.modal_nonotic strong::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 85px;
+  left: 202px;
+  width: 65px;
+  height: 12px;
+  background-color: #fffc35;
+  opacity: 0.5;
+  z-index: -1;
+}
+.modal_nonotic strong:nth-of-type(2)::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 142px;
+  left: 157px;
+  width: 65px;
+  height: 12px;
+  background-color: #fffc35;
+  opacity: 0.5;
+}
+.modal_nonotic > span{
+  font-size: 14px;
+  color: #a5a5a5;
+}
+.modal_close{
+  text-align: center;
+  font-size: 16px;
+  padding-top: 10px;
+  font-weight: 500;
+  word-break: keep-all;
+  /* padding: 60px 15px; */
+  line-height: 1.8;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: #f8f8f8;
+  border-radius: 0 0 50px 50px ;
+}
+.modal_close > i{
+  font-size: 13px;
+}
 /* top button */
 .top_bt {
   position: fixed;
