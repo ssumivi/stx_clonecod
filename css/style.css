@@ -45,9 +45,9 @@ body {
   display: block;
 }
 /* modal */
-body.active{
-  overflow-y: auto;
-}
+/* body.active{
+  overflow-y: hidden;
+} */
 .modal_wrap{
   position: fixed;
   width: 100%;

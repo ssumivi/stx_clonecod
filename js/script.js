@@ -28,8 +28,7 @@ window.onload = function () {
         top: 2690,
         behavior: "smooth",
       });
-    } 
-    else {
+    } else {
       window.scrollTo({
         top: 0,
         behavior: "smooth",
@@ -42,15 +41,32 @@ window.onload = function () {
     scrollTop = window.document.documentElement.scrollTop;
     if (scrollTop > 0) {
       topBtnImg.classList.add("up");
-    } 
-    else topBtnImg.classList.remove("up");
+    } else topBtnImg.classList.remove("up");
   });
   //안내창 스크립트
-  const body = document.querySelector("body")
-  const modal = document.querySelector(".modal_wrap")
-  modal.addEventListener("click", function(){
-    modal.style.display = "none"
-    fadeout(modal)
-    
-  })
+  const body = document.querySelector("body");
+  const modal = document.querySelector(".modal_wrap");
+  modal.addEventListener("click", function () {
+    modal.style.display = "none";
+    fadeout(modal);
+  });
+  // isOpen 값에 따라 스크롤을 제어하는 함수
+  function controlScroll(isOpen) {
+    if (isOpen) {
+      body.style.overflow = "hidden";
+    } else {
+      body.style.overflow = "auto";
+    }
+  }
+
+  // 초기 모달 상태 설정
+  const isOpen = true;
+  controlScroll(isOpen);
+
+  modal.addEventListener("click", function () {
+    modal.style.display = "none";
+
+    // 모달이 닫힐 때는 스크롤을 다시 활성화
+    controlScroll(false);
+  });
 };
